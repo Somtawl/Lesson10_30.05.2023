@@ -113,14 +113,14 @@ class Dragon():
             return False
 
     def __add__(self,other):
-        height2 = (self.height + other.height)/2
+        height2 = (self.height + other.height)//2
         if self.fire > other.fire:
             fire2 = self.fire
         else:
             fire2 = other.fire
         colour2 = [self.colour,other.colour]
         colour2 = sorted(colour2)[0]
-        NewDragon = height2,fire2,colour2
+        NewDragon = Dragon(height2,fire2,colour2)
         return NewDragon
     
     def __sub__(self, number):
